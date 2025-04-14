@@ -50,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
                 .requestEmail()
                 .build();
         mGoogleSignInClient= GoogleSignIn.getClient(this,gso);
+
+        ButtonAnimation.pressEffect(findViewById(R.id.loginButton));
+        ButtonAnimation.pressEffect(findViewById(R.id.continueAsGuest));
+        ButtonAnimation.pressEffect(findViewById(R.id.logInWithGoogle));
+        ButtonAnimation.pressEffect(findViewById(R.id.registJumpButton));
     }
 
     @Override
@@ -82,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        ButtonAnimation.pressEffect(findViewById(R.id.loginButton));
-
         EditText email=findViewById(R.id.editTextEmail);
         EditText password=findViewById(R.id.editTextPassword);
         String email_str=email.getText().toString().trim();
@@ -120,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void continueAsGuest(View view) {
-        ButtonAnimation.pressEffect(findViewById(R.id.continueAsGuest));
         mAuth.signInAnonymously().addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -136,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void logInWithGoogle(View view) {
-        ButtonAnimation.pressEffect(findViewById(R.id.logInWithGoogle));
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }

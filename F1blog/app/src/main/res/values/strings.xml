@@ -11,4 +11,5 @@
     <string name="logout">Logout</string>
     <string name="continue_as_guest">Continue as guest</string>
     <string name="log_in_with_google">Log in with Google</string>
+    <string name="valami">valami</string>
 </resources>

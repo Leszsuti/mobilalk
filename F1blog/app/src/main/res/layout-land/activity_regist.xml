@@ -82,7 +82,8 @@
             android:backgroundTint="@color/red"
             android:onClick="regist"
             android:text="@string/regist"
-            android:textSize="15sp" />
+            android:textStyle="bold"
+            android:textSize="17sp" />
 
         <Button
             android:id="@+id/loginButton_regist"
@@ -92,7 +93,8 @@
             android:backgroundTint="@color/white"
             android:onClick="loginJump"
             android:text="@string/login"
+            android:textStyle="bold"
             android:textColor="@color/red"
-            android:textSize="15sp" />
+            android:textSize="17sp" />
     </LinearLayout>
 </LinearLayout>

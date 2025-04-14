@@ -37,11 +37,12 @@ public class Regist extends AppCompatActivity {
             finish();
         }
         mAuth=FirebaseAuth.getInstance();
+
+        ButtonAnimation.pressEffect(findViewById(R.id.registButton_regist));
+        ButtonAnimation.pressEffect(findViewById(R.id.loginButton_regist));
     }
 
     public void regist(View view) {
-        ButtonAnimation.pressEffect(findViewById(R.id.registButton_regist));
-
         EditText username_regist=findViewById(R.id.editTextUserName_regist);
         EditText email_regist=findViewById(R.id.editTextEmail_regist);
         EditText password_regist=findViewById(R.id.editTextPassword_regist);

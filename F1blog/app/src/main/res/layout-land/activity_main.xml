@@ -27,7 +27,7 @@
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="19"
+        android:textSize="19sp"
         android:hint="@string/e_mail"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:ems="19"
+        android:textSize="19sp"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,19 +63,20 @@
         android:backgroundTint="@color/red"
         android:onClick="login"
         android:text="@string/login"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="20dp"
         android:layout_marginLeft="13dp"
-        android:layout_marginRight="13dp"/>
+        android:layout_marginRight="13dp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="13dp"
-        android:layout_marginTop="8dp"
         android:layout_marginRight="13dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -93,17 +94,45 @@
             android:layout_weight="1"
             android:backgroundTint="@color/red"
             android:onClick="continueAsGuest"
-            android:text="@string/continue_as_guest" />
+            android:text="@string/continue_as_guest"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
 
-        <Button
+        <LinearLayout
             android:id="@+id/logInWithGoogle"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
             android:backgroundTint="@color/red"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
             android:onClick="logInWithGoogle"
-            android:text="@string/log_in_with_google" />
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/continueAsGuest"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/valami"
+                android:src="@drawable/img_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_in_with_google"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="17sp" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/registJumpButton"
@@ -114,7 +143,9 @@
             android:backgroundTint="#FFFFFF"
             android:onClick="registJump"
             android:text="@string/create_an_account"
-            android:textColor="@color/red" />
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
 
     </LinearLayout>
 
