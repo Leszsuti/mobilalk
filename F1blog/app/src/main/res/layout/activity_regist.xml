@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Regist">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@color/red"
+        android:scaleType="fitStart"
+        android:paddingStart="13dp"
+        android:src="@drawable/f1logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="@string/regist"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextUserName_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:textSize="19sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:minHeight="48dp"/>
+
+    <EditText
+        android:id="@+id/editTextEmail_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        android:textSize="19sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:minHeight="48dp"/>
+
+    <EditText
+        android:id="@+id/editTextPassword_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="19sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:minHeight="48dp"/>
+
+    <EditText
+        android:id="@+id/editTextPassword2_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/password_again"
+        android:inputType="textPassword"
+        android:textSize="19sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/registButton_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/red"
+        android:onClick="regist"
+        android:text="@string/regist"
+        android:textSize="15sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"/>
+
+    <Button
+        android:id="@+id/loginButton_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:onClick="loginJump"
+        android:text="@string/login"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"/>
+
+
+</LinearLayout>
